@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal-website</title>
-    <link rel="stylesheet" href="styles/app.css">
-    <link rel="stylesheet" href="styles/responsive.css">
-    <link rel="stylesheet" href="styles/swiper-bundle.min.css">
-    <link rel="icon" type="image/png" href="images/app-logo.png">    
+    <link rel="stylesheet" href="{% static 'home/styles/app.css' %}">
+    <link rel="stylesheet" href="{% static 'home/styles/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'home/styles/swiper-bundle.min.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'home/images/app-logo.png' %}">    
 </head>
 <body class="cover">
     <section id=header>
@@ -358,22 +359,22 @@
             <div class="swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="images/portfolio-1.jpg" alt="Portfolio-sample1" class="portfolio__works-samples__image">
+                        <img src="{% static 'home/images/portfolio-1.jpg' %} " alt="Portfolio-sample1" class="portfolio__works-samples__image">
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/portfolio-2.jpg" alt="Portfolio-sample2" class="portfolio__works-samples__image">
+                        <img src="{% static 'home/images/portfolio-2.jpg' %} " alt="Portfolio-sample2" class="portfolio__works-samples__image">
                     </div>
                  <div class="swiper-slide">
-                         <img src="images/portfolio-3.jpg" alt="Portfolio-sample3" class="portfolio__works-samples__image">
+                         <img src="{% static 'home/images/portfolio-3.jpg' %} " alt="Portfolio-sample3" class="portfolio__works-samples__image">
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/portfolio-2.jpg" alt="Portfolio-sample2" class="portfolio__works-samples__image">
+                            <img src="{% static 'home/images/portfolio-2.jpg' %} " alt="Portfolio-sample2" class="portfolio__works-samples__image">
                         </div>
                         <div class="swiper-slide">
-                            <img src="images/portfolio-3.jpg" alt="Portfolio-sample3" class="portfolio__works-samples__image">
+                            <img src="{% static 'home/images/portfolio-3.jpg' %} " alt="Portfolio-sample3" class="portfolio__works-samples__image">
                            </div>
                            <div class="swiper-slide">
-                            <img src="images/portfolio-1.jpg" alt="Portfolio-sample1" class="portfolio__works-samples__image">
+                            <img src="{% static 'home/images/portfolio-1.jpg' %} " alt="Portfolio-sample1" class="portfolio__works-samples__image">
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -383,22 +384,22 @@
         <div class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="images/portfolio-2.jpg" alt="Portfolio-sample2" class="portfolio__works-samples__image">
+                    <img src="{% static 'home/images/portfolio-2.jpg' %} " alt="Portfolio-sample2" class="portfolio__works-samples__image">
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/portfolio-1.jpg" alt="Portfolio-sample1" class="portfolio__works-samples__image">
+                    <img src="{% static 'home/images/portfolio-1.jpg' %} " alt="Portfolio-sample1" class="portfolio__works-samples__image">
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/portfolio-2.jpg" alt="Portfolio-sample2" class="portfolio__works-samples__image">
+                    <img src="{% static 'home/images/portfolio-2.jpg' %} " alt="Portfolio-sample2" class="portfolio__works-samples__image">
                 </div>
                 <div class="swiper-slide">
-                        <img src="images/portfolio-3.jpg" alt="Portfolio-sample3" class="portfolio__works-samples__image">
+                        <img src="{% static 'home/images/portfolio-3.jpg' %} " alt="Portfolio-sample3" class="portfolio__works-samples__image">
                        </div>
                     <div class="swiper-slide">
-                        <img src="images/portfolio-3.jpg" alt="Portfolio-sample3" class="portfolio__works-samples__image">
+                        <img src="{% static 'home/images/portfolio-3.jpg' %} " alt="Portfolio-sample3" class="portfolio__works-samples__image">
                        </div>
                        <div class="swiper-slide">
-                        <img src="images/portfolio-1.jpg" alt="Portfolio-sample1" class="portfolio__works-samples__image">
+                        <img src="{% static 'home/images/portfolio-1.jpg' %} " alt="Portfolio-sample1" class="portfolio__works-samples__image">
                     </div>
                 </div>
                 
@@ -409,22 +410,22 @@
     <div class="swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <img src="images/portfolio-1.jpg" alt="Portfolio-sample1" class="portfolio__works-samples__image">
+                <img src="{% static 'home/images/portfolio-1.jpg' %} " alt="Portfolio-sample1" class="portfolio__works-samples__image">
             </div>
             <div class="swiper-slide">
-                <img src="images/portfolio-2.jpg" alt="Portfolio-sample2" class="portfolio__works-samples__image">
+                <img src="{% static 'home/images/portfolio-2.jpg' %} " alt="Portfolio-sample2" class="portfolio__works-samples__image">
             </div>
          <div class="swiper-slide">
-                 <img src="images/portfolio-3.jpg" alt="Portfolio-sample3" class="portfolio__works-samples__image">
+                 <img src="{% static 'home/images/portfolio-3.jpg' %} " alt="Portfolio-sample3" class="portfolio__works-samples__image">
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/portfolio-2.jpg" alt="Portfolio-sample2" class="portfolio__works-samples__image">
+                    <img src="{% static 'home/images/portfolio-2.jpg' %} " alt="Portfolio-sample2" class="portfolio__works-samples__image">
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/portfolio-3.jpg" alt="Portfolio-sample3" class="portfolio__works-samples__image">
+                    <img src="{% static 'home/images/portfolio-3.jpg' %} " alt="Portfolio-sample3" class="portfolio__works-samples__image">
                    </div>
                    <div class="swiper-slide">
-                    <img src="images/portfolio-1.jpg" alt="Portfolio-sample1" class="portfolio__works-samples__image">
+                    <img src="{% static 'home/images/portfolio-1.jpg' %} " alt="Portfolio-sample1" class="portfolio__works-samples__image">
                 </div>
             </div>
             
@@ -435,22 +436,22 @@
     <div class="swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                    <img src="images/portfolio-3.jpg" alt="Portfolio-sample3" class="portfolio__works-samples__image">
+                    <img src="{% static 'home/images/portfolio-3.jpg' %} " alt="Portfolio-sample3" class="portfolio__works-samples__image">
                    </div>
             <div class="swiper-slide">
-                <img src="images/portfolio-1.jpg" alt="Portfolio-sample1" class="portfolio__works-samples__image">
+                <img src="{% static 'home/images/portfolio-1.jpg' %} " alt="Portfolio-sample1" class="portfolio__works-samples__image">
             </div>
             <div class="swiper-slide">
-                <img src="images/portfolio-2.jpg" alt="Portfolio-sample2" class="portfolio__works-samples__image">
+                <img src="{% static 'home/images/portfolio-2.jpg' %} " alt="Portfolio-sample2" class="portfolio__works-samples__image">
             </div>
                 <div class="swiper-slide">
-                    <img src="images/portfolio-2.jpg" alt="Portfolio-sample2" class="portfolio__works-samples__image">
+                    <img src="{% static 'home/images/portfolio-2.jpg' %} " alt="Portfolio-sample2" class="portfolio__works-samples__image">
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/portfolio-3.jpg" alt="Portfolio-sample3" class="portfolio__works-samples__image">
+                    <img src="{% static 'home/images/portfolio-3.jpg' %} " alt="Portfolio-sample3" class="portfolio__works-samples__image">
                    </div>
                    <div class="swiper-slide">
-                    <img src="images/portfolio-1.jpg" alt="Portfolio-sample1" class="portfolio__works-samples__image">
+                    <img src="{% static 'home/images/portfolio-1.jpg' %} " alt="Portfolio-sample1" class="portfolio__works-samples__image">
                 </div>
             </div>
             
@@ -461,22 +462,22 @@
     <div class="swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <img src="images/portfolio-1.jpg" alt="Portfolio-sample1" class="portfolio__works-samples__image">
+                <img src="{% static 'home/images/portfolio-1.jpg' %} " alt="Portfolio-sample1" class="portfolio__works-samples__image">
             </div>
             <div class="swiper-slide">
-                <img src="images/portfolio-2.jpg" alt="Portfolio-sample2" class="portfolio__works-samples__image">
+                <img src="{% static 'home/images/portfolio-2.jpg' %} " alt="Portfolio-sample2" class="portfolio__works-samples__image">
             </div>
          <div class="swiper-slide">
-                 <img src="images/portfolio-3.jpg" alt="Portfolio-sample3" class="portfolio__works-samples__image">
+                 <img src="{% static 'home/images/portfolio-3.jpg' %} " alt="Portfolio-sample3" class="portfolio__works-samples__image">
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/portfolio-2.jpg" alt="Portfolio-sample2" class="portfolio__works-samples__image">
+                    <img src="{% static 'home/images/portfolio-2.jpg' %} " alt="Portfolio-sample2" class="portfolio__works-samples__image">
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/portfolio-3.jpg" alt="Portfolio-sample3" class="portfolio__works-samples__image">
+                    <img src="{% static 'home/images/portfolio-3.jpg' %} " alt="Portfolio-sample3" class="portfolio__works-samples__image">
                    </div>
                    <div class="swiper-slide">
-                    <img src="images/portfolio-1.jpg" alt="Portfolio-sample1" class="portfolio__works-samples__image">
+                    <img src="{% static 'home/images/portfolio-1.jpg' %} " alt="Portfolio-sample1" class="portfolio__works-samples__image">
                 </div>
             </div>
             
@@ -487,22 +488,22 @@
     <div class="swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <img src="images/portfolio-1.jpg" alt="Portfolio-sample1" class="portfolio__works-samples__image">
+                <img src="{% static 'home/images/portfolio-1.jpg' %} " alt="Portfolio-sample1" class="portfolio__works-samples__image">
             </div>
             <div class="swiper-slide">
-                <img src="images/portfolio-2.jpg" alt="Portfolio-sample2" class="portfolio__works-samples__image">
+                <img src="{% static 'home/images/portfolio-2.jpg' %} " alt="Portfolio-sample2" class="portfolio__works-samples__image">
             </div>
          <div class="swiper-slide">
-                 <img src="images/portfolio-3.jpg" alt="Portfolio-sample3" class="portfolio__works-samples__image">
+                 <img src="{% static 'home/images/portfolio-3.jpg' %} " alt="Portfolio-sample3" class="portfolio__works-samples__image">
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/portfolio-2.jpg" alt="Portfolio-sample2" class="portfolio__works-samples__image">
+                    <img src="{% static 'home/images/portfolio-2.jpg' %} " alt="Portfolio-sample2" class="portfolio__works-samples__image">
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/portfolio-3.jpg" alt="Portfolio-sample3" class="portfolio__works-samples__image">
+                    <img src="{% static 'home/images/portfolio-3.jpg' %} " alt="Portfolio-sample3" class="portfolio__works-samples__image">
                    </div>
                    <div class="swiper-slide">
-                    <img src="images/portfolio-1.jpg" alt="Portfolio-sample1" class="portfolio__works-samples__image">
+                    <img src="{% static 'home/images/portfolio-1.jpg' %} " alt="Portfolio-sample1" class="portfolio__works-samples__image">
                 </div>
             </div>
             
@@ -513,19 +514,19 @@
     <div class="swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <img src="images/portfolio-1.jpg" alt="Portfolio-sample1" class="portfolio__works-samples__image">
+                <img src="{% static 'home/images/portfolio-1.jpg' %} " alt="Portfolio-sample1" class="portfolio__works-samples__image">
             </div>
             <div class="swiper-slide">
-                <img src="images/portfolio-2.jpg" alt="Portfolio-sample2" class="portfolio__works-samples__image">
+                <img src="{% static 'home/images/portfolio-2.jpg' %} " alt="Portfolio-sample2" class="portfolio__works-samples__image">
             </div>
          <div class="swiper-slide">
-                 <img src="images/portfolio-3.jpg" alt="Portfolio-sample3" class="portfolio__works-samples__image">
+                 <img src="{% static 'home/images/portfolio-3.jpg' %} " alt="Portfolio-sample3" class="portfolio__works-samples__image">
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/portfolio-2.jpg" alt="Portfolio-sample2" class="portfolio__works-samples__image">
+                    <img src="{% static 'home/images/portfolio-2.jpg' %} " alt="Portfolio-sample2" class="portfolio__works-samples__image">
                 </div>
                    <div class="swiper-slide">
-                    <img src="images/portfolio-1.jpg" alt="Portfolio-sample1" class="portfolio__works-samples__image">
+                    <img src="{% static 'home/images/portfolio-1.jpg' %} " alt="Portfolio-sample1" class="portfolio__works-samples__image">
                 </div>
             </div>
             
@@ -701,7 +702,7 @@
     
     
     
-    <script src="scripts/swiper-bundle.min.js"></script>
-    <script src="scripts/script.js"></script>
+    <script src="{% static 'home/scripts/swiper-bundle.min.js' %} "></script>
+    <script src="{% static 'home/scripts/script.js' %} "></script>
 </body>
 </html>
