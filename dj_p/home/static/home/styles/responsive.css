@@ -1,0 +1,445 @@
+
+@media screen and (max-width: 1400px) {
+    .Home__img {
+       width: 40rem;
+       height: 40rem;
+    }
+    .Home__info-caption {
+        font-size: 1.2rem;
+    }
+    .Home__info-title {
+        font-size: 4rem;
+    }
+    .about-us__content {
+        width: 100rem;    
+        height: 70rem;
+       }
+        .first-btn{
+           width: 15rem;
+           line-height: 2rem;
+       }
+       .second-btn {
+           width: 15rem;
+           line-height: 2rem;
+       }
+       .resume__overall-skills {
+           width: 28rem;
+       }
+       .resume__details {
+           width: 60rem;
+           margin-left: 15rem;
+       }
+       .hover-shape {
+           width: 26rem;
+       }
+       .pricing__elements__item {
+        flex-basis: 35rem;
+
+       }
+        .pricing-icon-caption {
+            margin: 0.35rem 0 0 9rem
+        }
+        .contact-us__form {
+            width: 40rem;
+            margin: auto;
+        }
+        .contact-us__main-form__input , .contact-us__main-form__message , .contact-us__form__submit {
+            width: 31rem;
+            margin: auto;
+        }
+        .contact-us__form__header {
+            margin: 2rem 0 4rem -6rem;
+        }
+
+
+}
+@media screen and (max-width: 1200px) {
+    .mobile-menu__list ,.mobile-menu__list-items {
+        display: none;
+    }
+    .back-img {
+        width: 99.2rem;
+    }
+    .about-us__content {
+     width: 95rem;    
+     height: 70rem;
+    }
+     .first-btn{
+        width: 15rem;
+        line-height: 2rem;
+    }
+    .second-btn {
+        width: 15rem;
+        line-height: 2rem;
+    }
+    .resume__overall-skills {
+        width: 26rem;
+    }
+    .resume__details {
+        width: 50rem;
+        margin-left: 1rem auto;
+        order: 2;
+    }
+    .skills-caption {
+        font-size: 1.6rem;
+        order: 1;
+        
+    }
+    .hover-shape {
+        width: 24rem;
+    }
+    .portfolio__headers__list__items {
+        margin-right: .5rem;
+    }
+    .resume__details {
+        margin-left: 7rem;
+    }
+    .border-box-shadow--pricing {
+        height: 160rem;
+    }
+    .pricing-icon-caption {
+        margin: 0.35rem 0 0 12rem
+    }
+    .pricing-icon-caption--purple {
+        margin: 0.35rem 0 0 37rem
+    }
+    .contact-us__form {
+        margin: auto;
+        position: static;
+    }
+    .contact-us__location {
+        display: none;
+    }
+    .footer__icon {
+        width: 30rem;
+        margin-left: 5rem;
+    }
+
+}
+@media screen and (max-width: 992px) {
+    .nav-menu-items {
+        margin-left: 2.4rem;
+        font-size: 1.3rem;
+    }
+    .nav-caption {
+        font-size: 4.5rem;
+    }
+    .mobile-menu__list ,.mobile-menu__list-items {
+        display: none;
+    }
+    .Home__info-title {
+        font-size: 3rem;
+    }
+    .Home__info-caption {
+        font-size: 1.1rem;
+
+    }
+    .Home__img {
+        width: 30rem;
+        height:30rem;
+    }
+    .first-btn { 
+        width: 15rem;
+    }
+    .second-btn {
+        width: 15rem;
+    }
+    .back-img {
+        width: 99.2rem;
+    }
+    .about-us__content {
+        width: 70rem;    
+        height: 90rem;
+       }
+        .first-btn{
+           width: 15rem;
+           line-height: 2rem;
+           text-align: center;
+       }
+       .second-btn {
+           width: 15rem;
+           line-height: 2rem;
+       }
+       .about-us__content-pic {
+           height: 45%;
+           background-position: top;
+           flex-grow: 1;
+       }
+       .about-us__content-info {
+        height: 45%;
+        flex-grow: 1;
+       }
+       .first-btn , .second-btn {
+           flex-grow: 1;
+       }
+       .about-us__content-info-header {
+           font-size:1.8rem;
+           text-align: center;
+       }
+       .about-us__content-info-caption{
+           font-size: 1.2rem;
+       }
+       .about-us__content-info-list-header {
+           font-size: 1.3rem;
+           margin-top: 0rem;
+           text-align: center;
+       }
+       .about-us__content-info-list {
+           margin: 0;
+           margin-bottom: 0.5rem;
+       }
+       .about-us__content-info-list-items{
+           font-size: 1rem;
+           margin: 1rem 21rem;
+       }
+    .border-box-shadow {
+        height: 126rem;
+    }
+    .resume__overall-skills {
+        width: 32rem;
+        margin: 4rem auto;
+        order: 2;
+    }
+    .resume__details {
+        width: 50rem;
+        margin: 1rem auto;
+        order: 1;
+    }
+    .skills-caption {
+        font-size: 2rem;
+    }
+    .hover-shape {
+        width: 26rem;
+    } 
+    .portfolio__headers__list__items {
+        font-size: 1.4rem;
+        margin-right: 0;
+        min-width: 10rem;
+
+    }
+    .portfolio__header__list {
+       max-width: 45rem;
+
+    }
+    .portfolio__works-samples__image {
+        margin-right: 0;
+    }
+    .border-box-shadow--pricing {
+        height: 220rem;
+    }
+    .pricing-icon-caption {
+        margin: 0.35rem 0 0 26rem
+    }
+
+  
+    
+}
+@media screen and (max-width: 767px) {
+    .nav-menu-items {
+        display: none;
+    }
+    .nav__toggle-icon {
+        display: block;
+    }
+    .mobile-menu__list ,.mobile-menu__list-items {
+        display: block;
+    }
+    .Home__info-title{
+        font-size: 3rem;
+        line-height: 1rem;
+
+    }
+    .Home__info-caption {
+        font-size: 1.4rem;
+        line-height: 6rem;
+    }
+    .Home__img{
+        width: 45rem;
+        height: 45rem;
+        margin: 0 auto;
+        margin-top: 15rem;
+        order: 1;
+    }
+    .first-btn{
+        width: 15rem;
+        line-height: 2rem;
+    }
+    .second-btn {
+        width: 15rem;
+        line-height: 2rem;
+    }
+    .Home__info {
+        align-items: center;
+        margin-top: 5rem;
+        line-height: 2rem;
+        order:2;
+        flex-grow: 1;
+    }
+    .first-btn { 
+        width: 15rem;
+    }
+    .second-btn {
+        width: 15rem;
+    }
+    .back-img {
+        width: 99.2rem;
+    }
+    .about-us__content {
+        width: 50rem;    
+        height: 90rem;
+       }
+       .about-us__content-info-caption {
+           margin: 0 2rem;
+       }    
+
+    .about-us__content-info-list-header {
+           font-size: 1.3rem;
+           margin-top: 2rem;
+           text-align: center;
+       }
+       .about-us__content-info {
+           padding: 0;
+           height: 50rem;
+       }
+       .about-us__content-info-list-items {
+           margin: 1rem 16rem;
+       }
+    .portfolio__header__list {
+        max-width: 25rem;
+        flex-wrap: wrap;
+        justify-content: center;
+ 
+     }
+    .portfolio__headers__list__items {
+        margin: 2rem 0 2rem 0;
+
+    }
+    .portfolio__headers__list__items--active {
+        padding: 1rem 1.5rem;
+        width: 12rem;
+        height: 4rem;
+    }
+    .pricing-icon-caption {
+        margin: 0.35rem 0 0 17rem
+    }
+    .Footer__icon__svg , .Footer__icon__svg--facebook {
+        width: 10%;
+        height: 10%;
+    }
+    .footer__icon {
+        margin-left: 0;
+    }
+    .footer__caption {
+        font-size: 1.4rem;
+        margin: 5rem auto;
+
+    }
+    footer {
+        height: 7rem;
+    }
+
+
+
+
+}
+@media screen and (max-width: 576px) {
+    /* .mobile-menu__list ,.mobile-menu__list-items {
+        display: block;
+    } */
+    .Home__info-caption {
+        font-size: 1.1rem;
+    }
+    .about-us__content {
+        width: 35rem;    
+        height: 95rem;
+       }
+    .about-us__content-info-list {
+        margin: 2rem 0;
+    } 
+    .resume__details-content {
+        font-size: 1.4rem;
+    }
+    .resume__details-header {
+        font-size: 1.6rem;
+    }
+    .portfolio__header__list {
+        max-width: 25rem;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+    
+     }
+    .portfolio__headers__list__items {
+        margin: 0rem 0 2rem 0;
+        text-align: left;
+    
+    }
+    .portfolio__headers__list__items--active {
+        padding: 1rem 1.5rem;
+        width: 12rem;
+        height: 4rem;
+    }
+    .pricing-icon-caption {
+        margin: 0.35rem 0 0 11rem;
+    }
+    .pricing__elements__item {
+        flex-basis: 15rem;
+    } 
+    .footer__caption {
+        font-size: 1.1rem;
+    }
+    .Footer__icon__svg , .Footer__icon__svg--facebook {
+        width: 5%;
+        height: 5%;
+    }
+    .about-us__content-info {
+        width: 35rem;
+    }
+    .about-us__content-info-list-items {
+        margin: 1rem 8rem;
+    }
+    .first-btn-about-us , .second-btn-about-us {
+        height: 3.5rem;
+        width: 4rem;
+        flex-grow: .5;
+        font-size: 1.2rem;
+    }
+    .container , #contact-us {
+        width: 40rem;
+    }
+    #Home , #About-us, #services , #resume, #portfolio, #pricing, #contact-us ,footer {
+        margin-left: 13rem;
+    }
+    .Home__border-img {
+        width: 113%;
+    }
+    #resume {
+        width:43rem;
+    }
+    #pricing {
+        width:43rem;
+        height: 240rem;
+    }
+    .border-box-shadow {
+        height: 130rem;
+    }
+    .border-box-shadow--pricing{ 
+        height: 226rem;
+    }
+    .Home__border-img {
+        display: none;
+    }
+    #About-us {
+        margin-top: 3rem;
+    }
+}
+@media screen and (max-width: 376px) {
+
+    .services-shape {
+        display: none;
+    }
+    .pricing-icon-caption {
+        margin: 0.35rem 0 0 6rem;
+    }
+
+}
