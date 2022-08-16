@@ -1,6 +1,6 @@
-from cProfile import Profile
-from django.shortcuts import render
-from .models import Portfolio,Bio,MyInfo,Pricing,ContactUs,Services
+from django.shortcuts import render, redirect 
+from .models import Portfolio,Bio,MyInfo,Pricing,Services,ContactUsModel
+from .form import ContactUsForm
 
 def index(request):
     E_bio=Bio.objects.filter(profession_category='E')
@@ -17,6 +17,14 @@ def index(request):
     B_pricing=Pricing.objects.filter(plan="B")
     S_pricing=Pricing.objects.filter(plan="S")
     P_pricing=Pricing.objects.filter(plan="P")
+    
+    form=ContactUsForm()
+    
+    if request.method == "POST":
+        form=ContactUsForm(request.POST)
+        if form.is_valid():
+            ContactUsModel.objects.create(**form.cleaned_data)
+
     return render(request,'home/index.html',{
         "portfolio":{
             'ALL':Portfolio.objects.all(),
@@ -32,12 +40,12 @@ def index(request):
             "P":P_bio,
             "D":D_bio,
             "S":S_bio},
-        "info":MyInfo.objects.all(),
         "pricing":{
             "B":B_pricing,
             "S":S_pricing,
             "P":P_pricing,
         },
-        "":ContactUs,
         "services":Services.objects.all(),
+        "info":MyInfo.objects.all(),
+        "contact_form":form,
     })

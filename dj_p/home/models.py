@@ -77,9 +77,13 @@ class Pricing(models.Model):
     business_development=models.BooleanField(default=False)
 
 
-class ContactUs(models.Model):
+class ContactUsModel(models.Model):
     name=models.CharField(max_length=50)
     email=models.EmailField()
     subject=models.CharField(max_length=50)
     estimated_budget=models.CharField(max_length=50)
     enter_your_message=models.TextField()
+
+    def __str__(self):
+        return f'{self.name}-{self.subject}-{self.estimated_budget}'    
+
