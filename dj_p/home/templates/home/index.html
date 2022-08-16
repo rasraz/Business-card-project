@@ -49,7 +49,7 @@
         <div class="container">
             <div class="row">
                 <div class="Home__info col-sm-12 col-md-7 col-lg-7 ">
-                    <h3 class="Home__info-header">Hello, IM<span class="Home__info-header-orange">{{info.name}}</span></h3>
+                    <h3 class="Home__info-header">Hello, IM <span class="Home__info-header-orange">{{info.name}}</span></h3>
                     <h2 class="Home__info-title">{{info.title}}</h2>
                     <p class="Home__info-caption">{{info.caption}}</p>
                     <div class="btns">
@@ -80,7 +80,7 @@
                     <p class="about-us__content-info-caption">{{info.about_us}}</p>
                     <h3 class="about-us__content-info-list-header">Here is Few Features:</h3>
                     <ul class="about-us__content-info-list">
-                        {% for i in info.features %}
+                        {% for i in info.features.feature %}
                             <li class="about-us__content-info-list-items">{{i}}</li>
                         {% endfor %}
                     </ul>
@@ -204,7 +204,6 @@
                             <div class="resume__details-year">{{item.start_year.year}}-{{item.end_year.year}}</div>
                             <div class="resume__details-style-circle"></div>
                         </div>
-                    </div>
                     {% endfor%}
                     <div class="resume__details-line"></div>
                 </div>
@@ -224,9 +223,9 @@
                         <div class="resume__details-items">
                             <h4 class="resume__details-header">{{item.header}}</h4>
                             <p class="resume__details-content">{{item.details}}</p>
-                                <div class="resume__details-year">{{item.start_year.year}}-{{item.end_year.year}}</div>
-                                <div class="resume__details-style-circle"></div>
-                        </div>    
+                            <div class="resume__details-year">{{item.start_year.year}}-{{item.end_year.year}}</div>
+                            <div class="resume__details-style-circle"></div>
+                        </div>
                     {% endfor %}
                     <div class="resume__details-line"></div>
                 </div>
@@ -235,9 +234,9 @@
                         <div class="resume__details-items">
                             <h4 class="resume__details-header">{{item.header}}</h4>
                             <p class="resume__details-content">{{item.details}}</p>
-                                <div class="resume__details-year">{{item.start_year.year}}-{{item.end_year.year}}</div>
-                                <div class="resume__details-style-circle"></div>
-                        </div>    
+                            <div class="resume__details-year">{{item.start_year.year}}-{{item.end_year.year}}</div>
+                            <div class="resume__details-style-circle"></div>
+                        </div> 
                     {% endfor %}
                     <div class="resume__details-line"></div>
                 </div>
@@ -246,8 +245,8 @@
                         <div class="resume__details-items">
                             <h4 class="resume__details-header">{{item.header}}</h4>
                             <p class="resume__details-content">{{item.details}}</p>
-                                <div class="resume__details-year">{{item.start_year.year}}-{{item.end_year.year}}</div>
-                                <div class="resume__details-style-circle"></div>
+                            <div class="resume__details-year">{{item.start_year.year}}-{{item.end_year.year}}</div>
+                            <div class="resume__details-style-circle"></div>
                         </div>
                     {% endfor %}
                     <div class="resume__details-line"></div>
@@ -354,7 +353,7 @@
     <div class="swiper">
         <div class="swiper-wrapper">
             {% for item in portfolio.P %}
-            <div class="swiper-slide">
+            <div class="swiper-slide swiper-slide-active">
                 <img src="{{item.image.url}}" alt="Portfolio-sample1" class="portfolio__works-samples__image">
             </div>
             {% endfor %}
@@ -381,53 +380,77 @@
                             <p class="pricing-description">Only PSD Design</p>
                         </div>
                             <div class="pricing-items">
-                                <div class="pricing-icon-caption"><svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
-                                    {% if pricing.graphic_design %}
-                                        <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                <div class="pricing-icon-caption">
+                                    {% if pricing.B.graphic_design %}
+                                        <svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
+                                            <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                        </svg>
                                     {% else %}
-                                        <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
+                                        <svg width="14.058" height="18.773" viewBox="0 0 320 512">
+                                            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
+                                        </svg>
                                     {% endif %}
-                                    </svg><p class="items-caption">Graphic Design</p></div>
+                                    <p class="items-caption">Graphic Design</p></div>
 
-                                    <div class="pricing-icon-caption"><svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
-                                    {% if pricing.web_design %}
+                                    <div class="pricing-icon-caption">
+                                    {% if pricing.B.web_design %}
+                                        <svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
                                         <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                    </svg>
                                     {% else %}
-                                        <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
+                                        <svg width="14.058" height="18.773" viewBox="0 0 320 512">
+                                            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
+                                        </svg>
                                     {% endif %}
-                                    </svg><p class="items-caption">Web Design</p></div>
+                                    <p class="items-caption">Web Design</p></div>
 
-                                  <div class="pricing-icon-caption"><svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
-                                    {% if pricing.html_css %}
-                                        <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                  <div class="pricing-icon-caption">
+                                    {% if pricing.B.html_css %}
+                                        <svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
+                                            <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                        </svg>
                                     {% else %}
-                                        <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
-                                    {% endif %}                                  
-                                    </svg><p class="items-caption">HTML & CSS</p></div>
+                                        <svg width="14.058" height="18.773" viewBox="0 0 320 512">
+                                            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
+                                        </svg>
+                                    {% endif %}                               
+                                    <p class="items-caption">HTML & CSS</p></div>
 
-                                    <div class="pricing-icon-caption"><svg width="14.058" height="18.773" viewBox="0 0 320 512">
-                                    {% if pricing.ui_ux_design %}
-                                        <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                    <div class="pricing-icon-caption">
+                                    {% if pricing.B.ui_ux_design %}
+                                        <svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
+                                            <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                        </svg>
                                     {% else %}
-                                        <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
-                                    {% endif %}                                    
-                                    </svg><p class="items-caption">UI/UX Design</p></div>
+                                        <svg width="14.058" height="18.773" viewBox="0 0 320 512">
+                                            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
+                                        </svg>
+                                    {% endif %}                                 
+                                    <p class="items-caption">UI/UX Design</p></div>
 
-                                    <div class="pricing-icon-caption"><svg width="14.058" height="18.773" viewBox="0 0 320 512">
-                                    {% if pricing.SEO_optimization %}
-                                        <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                    <div class="pricing-icon-caption">
+                                    {% if pricing.B.SEO_optimization %}
+                                        <svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
+                                            <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                        </svg>
                                     {% else %}
-                                        <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
-                                    {% endif %}                                    
-                                    </svg><p class="items-caption">SEO Optimization</p></div>
+                                        <svg width="14.058" height="18.773" viewBox="0 0 320 512">
+                                            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
+                                        </svg>
+                                    {% endif %}                                 
+                                    <p class="items-caption">SEO Optimization</p></div>
 
-                                    <div class="pricing-icon-caption"><svg width="14.058" height="18.773" viewBox="0 0 320 512">
-                                    {% if pricing.business_development %}
-                                        <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                    <div class="pricing-icon-caption">
+                                    {% if pricing.B.business_development %}
+                                        <svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
+                                            <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                        </svg>
                                     {% else %}
-                                        <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
-                                    {% endif %}                                    
-                                    </svg><p class="items-caption">Business Development</p></div>
+                                        <svg width="14.058" height="18.773" viewBox="0 0 320 512">
+                                            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
+                                        </svg>
+                                    {% endif %}                                
+                                    <p class="items-caption">Business Development</p></div>
 
                                 </div>
                                 <button class="first-btn pricing-btn orange">Choose plan</button>
@@ -439,53 +462,77 @@
                                 <p class="pricing-description">Only PSD Design</p>
                             </div>
                             <div class="pricing-items">
-                                <div class="pricing-icon-caption"><svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
-                                    {% if pricing.graphic_design %}
-                                        <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                <div class="pricing-icon-caption">
+                                    {% if pricing.S.graphic_design %}
+                                        <svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
+                                            <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                        </svg>
                                     {% else %}
-                                        <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
+                                        <svg width="14.058" height="18.773" viewBox="0 0 320 512">
+                                            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
+                                        </svg>
                                     {% endif %}
-                                    </svg><p class="items-caption">Graphic Design</p></div>
+                                    <p class="items-caption">Graphic Design</p></div>
 
-                                    <div class="pricing-icon-caption"><svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
-                                    {% if pricing.web_design %}
-                                        <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                    <div class="pricing-icon-caption">
+                                    {% if pricing.S.web_design %}
+                                        <svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
+                                            <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                        </svg>
                                     {% else %}
-                                        <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
+                                        <svg width="14.058" height="18.773" viewBox="0 0 320 512">
+                                            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
+                                        </svg>
                                     {% endif %}
-                                    </svg><p class="items-caption">Web Design</p></div>
+                                    <p class="items-caption">Web Design</p></div>
 
-                                  <div class="pricing-icon-caption"><svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
-                                    {% if pricing.html_css %}
-                                        <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                  <div class="pricing-icon-caption">
+                                    {% if pricing.S.html_css %}
+                                        <svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
+                                            <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                        </svg>
                                     {% else %}
-                                        <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
-                                    {% endif %}                                  
-                                    </svg><p class="items-caption">HTML & CSS</p></div>
+                                        <svg width="14.058" height="18.773" viewBox="0 0 320 512">
+                                            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
+                                        </svg>
+                                    {% endif %}                                
+                                    <p class="items-caption">HTML & CSS</p></div>
 
-                                    <div class="pricing-icon-caption"><svg width="14.058" height="18.773" viewBox="0 0 320 512">
-                                    {% if pricing.ui_ux_design %}
-                                        <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                    <div class="pricing-icon-caption">
+                                    {% if pricing.S.ui_ux_design %}
+                                        <svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
+                                            <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                        </svg>
                                     {% else %}
-                                        <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
-                                    {% endif %}                                    
-                                    </svg><p class="items-caption">UI/UX Design</p></div>
+                                        <svg width="14.058" height="18.773" viewBox="0 0 320 512">
+                                            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
+                                        </svg>
+                                    {% endif %}                               
+                                    <p class="items-caption">UI/UX Design</p></div>
 
-                                    <div class="pricing-icon-caption"><svg width="14.058" height="18.773" viewBox="0 0 320 512">
-                                    {% if pricing.SEO_optimization %}
-                                        <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                    <div class="pricing-icon-caption">
+                                    {% if pricing.S.SEO_optimization %}
+                                        <svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
+                                            <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                        </svg>
                                     {% else %}
-                                        <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
-                                    {% endif %}                                    
-                                    </svg><p class="items-caption">SEO Optimization</p></div>
+                                        <svg width="14.058" height="18.773" viewBox="0 0 320 512">
+                                            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
+                                        </svg>
+                                    {% endif %}                               
+                                    <p class="items-caption">SEO Optimization</p></div>
 
-                                    <div class="pricing-icon-caption"><svg width="14.058" height="18.773" viewBox="0 0 320 512">
-                                    {% if pricing.business_development %}
-                                        <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                    <div class="pricing-icon-caption">
+                                    {% if pricing.S.business_development %}
+                                        <svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
+                                            <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                        </svg>
                                     {% else %}
-                                        <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
-                                    {% endif %}                                    
-                                    </svg><p class="items-caption">Business Development</p></div>
+                                        <svg width="14.058" height="18.773" viewBox="0 0 320 512">
+                                            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
+                                        </svg>
+                                    {% endif %}                                 
+                                    <p class="items-caption">Business Development</p></div>
 
                                 </div>
                                     <button class="first-btn pricing-btn pink">Choose plan</button>
@@ -497,53 +544,77 @@
                                     <p class="pricing-description">Only PSD Design</p>
                                </div>
                                <div class="pricing-items">
-                                <div class="pricing-icon-caption"><svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
-                                    {% if pricing.graphic_design %}
-                                        <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                <div class="pricing-icon-caption">
+                                    {% if pricing.P.graphic_design %}
+                                        <svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
+                                            <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                        </svg>
                                     {% else %}
-                                        <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
-                                    {% endif %}
-                                    </svg><p class="items-caption">Graphic Design</p></div>
+                                        <svg width="14.058" height="18.773" viewBox="0 0 320 512">
+                                            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
+                                        </svg>
+                                    {% endif %}  
+                                    <p class="items-caption">Graphic Design</p></div>
 
-                                    <div class="pricing-icon-caption"><svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
-                                    {% if pricing.web_design %}
-                                        <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                    <div class="pricing-icon-caption">
+                                    {% if pricing.P.web_design %}
+                                        <svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
+                                            <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                        </svg>
                                     {% else %}
-                                        <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
-                                    {% endif %}
-                                    </svg><p class="items-caption">Web Design</p></div>
+                                        <svg width="14.058" height="18.773" viewBox="0 0 320 512">
+                                            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
+                                        </svg>
+                                    {% endif %}  
+                                    <p class="items-caption">Web Design</p></div>
 
-                                  <div class="pricing-icon-caption"><svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
-                                    {% if pricing.html_css %}
-                                        <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                  <div class="pricing-icon-caption">
+                                    {% if pricing.P.html_css %}
+                                        <svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
+                                            <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                        </svg>
                                     {% else %}
-                                        <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
+                                        <svg width="14.058" height="18.773" viewBox="0 0 320 512">
+                                            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
+                                        </svg>
                                     {% endif %}                                  
-                                    </svg><p class="items-caption">HTML & CSS</p></div>
+                                    <p class="items-caption">HTML & CSS</p></div>
 
-                                    <div class="pricing-icon-caption"><svg width="14.058" height="18.773" viewBox="0 0 320 512">
-                                    {% if pricing.ui_ux_design %}
-                                        <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                    <div class="pricing-icon-caption">
+                                    {% if pricing.P.ui_ux_design %}
+                                        <svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
+                                            <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                        </svg>
                                     {% else %}
-                                        <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
+                                        <svg width="14.058" height="18.773" viewBox="0 0 320 512">
+                                            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
+                                        </svg>
                                     {% endif %}                                    
-                                    </svg><p class="items-caption">UI/UX Design</p></div>
+                                    <p class="items-caption">UI/UX Design</p></div>
 
-                                    <div class="pricing-icon-caption"><svg width="14.058" height="18.773" viewBox="0 0 320 512">
-                                    {% if pricing.SEO_optimization %}
-                                        <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                    <div class="pricing-icon-caption">
+                                    {% if pricing.P.SEO_optimization %}
+                                        <svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
+                                            <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                        </svg>
                                     {% else %}
-                                        <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
-                                    {% endif %}                                    
-                                    </svg><p class="items-caption">SEO Optimization</p></div>
+                                        <svg width="14.058" height="18.773" viewBox="0 0 320 512">
+                                            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
+                                        </svg>
+                                    {% endif %}                                   
+                                    <p class="items-caption">SEO Optimization</p></div>
 
-                                    <div class="pricing-icon-caption"><svg width="14.058" height="18.773" viewBox="0 0 320 512">
-                                    {% if pricing.business_development %}
-                                        <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                    <div class="pricing-icon-caption">
+                                    {% if pricing.P.business_development %}
+                                        <svg width="14.058" height="11.773" viewBox="0 0 14.058 11.773">
+                                            <path id="Icon_material-done" data-name="Icon material-done" d="M555.037,6029.945l-3.028-3.231L551,6027.791l4.037,4.309,8.651-9.233-1.009-1.077Z" transform="translate(-550.315 -6021.058)" fill="#333" stroke="#333" stroke-width="1"/>
+                                        </svg>
                                     {% else %}
-                                        <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
-                                    {% endif %}                                    
-                                    </svg><p class="items-caption">Business Development</p></div>
+                                        <svg width="14.058" height="18.773" viewBox="0 0 320 512">
+                                            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/ fill="#333">
+                                        </svg>
+                                    {% endif %}                                 
+                                    <p class="items-caption">Business Development</p></div>
 
                                 </div>
                                 <button class="first-btn pricing-btn purple">Choose plan</button>

@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect 
+from django.shortcuts import render
 from .models import Portfolio,Bio,MyInfo,Pricing,Services,ContactUsModel
 from .form import ContactUsForm
 
@@ -17,7 +17,7 @@ def index(request):
     B_pricing=Pricing.objects.filter(plan="B")
     S_pricing=Pricing.objects.filter(plan="S")
     P_pricing=Pricing.objects.filter(plan="P")
-    
+
     form=ContactUsForm()
     
     if request.method == "POST":
@@ -41,11 +41,11 @@ def index(request):
             "D":D_bio,
             "S":S_bio},
         "pricing":{
-            "B":B_pricing,
-            "S":S_pricing,
-            "P":P_pricing,
+            "B":B_pricing[0],
+            "S":S_pricing[0],
+            "P":P_pricing[0],
         },
-        "services":Services.objects.all(),
-        "info":MyInfo.objects.all(),
+        "services":Services.objects.all()[0],
+        "info":MyInfo.objects.all()[0],
         "contact_form":form,
     })

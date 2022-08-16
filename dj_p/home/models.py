@@ -76,6 +76,9 @@ class Pricing(models.Model):
     SEO_optimization=models.BooleanField(default=False)
     business_development=models.BooleanField(default=False)
 
+    def __str__(self):
+        return f'{self.plan}'
+
 
 class ContactUsModel(models.Model):
     name=models.CharField(max_length=50)
